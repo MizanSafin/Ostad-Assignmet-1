@@ -1,0 +1,68 @@
+<script>
+  // 1) Topic: Online Store Discount Calculator (If-Else Statement)
+  function calculateDiscount(totalAmount) {
+    let discount;
+    let disCountedAmount;
+    if (totalAmount < 50) {
+      discount = 0;
+      disCountedAmount = totalAmount;
+    } else if (totalAmount >= 50 && totalAmount < 100) {
+      discount = (5 * totalAmount) / 100;
+      disCountedAmount = totalAmount - discount;
+    } else if (totalAmount >= 100 && totalAmount < 200) {
+      discount = (10 * totalAmount) / 100;
+      disCountedAmount = totalAmount - discount;
+    } else {
+      discount = (15 * totalAmount) / 100;
+      disCountedAmount = totalAmount - discount;
+    }
+    console.log(
+      `Discounted amount : ${disCountedAmount} .Total amount + discount amount : ${
+        totalAmount + discount
+      } `
+    );
+  }
+
+  calculateDiscount(20);
+
+  // 2) Topic: Filter Even Numbers
+
+  function filterEvenNum(arr) {
+    return arr.filter((value) => value % 2 === 0);
+  }
+  let result = filterEvenNum([12, 34, 45, 23, 6, 78, 54, 90]);
+  console.log(result);
+
+  // 3) Topic: Multiplication Table Generator
+  function generateMultiplicationTable(value) {
+    for (let i = 1; i <= 10; i++) {
+      console.log(`${value} * ${i} = ${value * i}`);
+    }
+  }
+
+  generateMultiplicationTable(5);
+
+  // 4) Topic: Grade Calculator (JavaScript Switch Case)
+  function calculateGrade(score) {
+    let result;
+    switch (true) {
+      case score >= 90:
+        result = "A";
+        break;
+      case score >= 80 && score < 90:
+        result = "B";
+        break;
+      case score >= 70 && score < 80:
+        result = "C";
+        break;
+      case score >= 60 && score < 70:
+        result = "D";
+        break;
+      case score < 60:
+        result = "F";
+    }
+    return result;
+  }
+
+  console.log(calculateGrade(90));
+</script>
